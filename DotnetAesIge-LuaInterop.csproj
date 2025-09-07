@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net9.0-windows10.0.26100.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <OutputType>Exe</OutputType>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
@@ -40,6 +40,10 @@
   <PropertyGroup Condition="$([MSBuild]::IsOSPlatform('OSX'))">
     <RuntimeIdentifier>osx-x64</RuntimeIdentifier>
   </PropertyGroup>
+  
+  <ItemGroup>
+    <Compile Include="lua\biaesige.lua" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="DllExport" Version="1.8.1" />
